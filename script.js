@@ -41,7 +41,7 @@ function getCookie(nameCookie) {
         while (cookie.charAt(0) == ' ')
             cookie = cookie.substring(1)
         if (cookie.indexOf(name) == 0){
-            console.log("%cOK! Cookie does exists.", 'background: #222; color: green')
+            console.log("Cookie does exist.", 'background: #222; color: green')
             return cookie.substring(name.length, cookie.length)
         }
     }
@@ -145,6 +145,7 @@ document.getElementById("logout-button").addEventListener('click', function () {
 
 
 /* ########## show password ################ */
+
 function showPasswd(field1, field2) {
     var show = document.getElementById(field1)
     var show2 = document.getElementById(field2)
