@@ -21,21 +21,21 @@
             <h2>Register</h2>
             <div class="text-form">
                 <form onsubmit="get_submit()">
-                    Name *<br>
+                    First Name *<br>
                     <input type="text" name="name" id="name" autofocus="autofocus"
                     pattern="[A-Za-zÑñ]{1,32}"
                     title="Must contain only letters"
                     required> <br>
-                    Surname *<br>
+                    Last Name *<br>
                     <input type="text" name="surname" id="surname"
                     pattern="[A-Za-zÑñ]{1,32}"
                     title="Must contain only letters"
                     required> <br>
-                    Contact (Email / Phone) *<br>
+                    Email*<br>
                     <input type="email" name="contact" id="contact"
                     pattern="^([0-9]{9})|([A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})$"
                     title="Must be a valid Email"
-                    required> <br>
+                    required> <br><br>
                     Password *<br>
                     <input type="password" name="passwd" id="passwd"
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"

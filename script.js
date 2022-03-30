@@ -12,13 +12,7 @@ function tab (show, hide, focus){
     document.getElementById(hide).style.display = "none"
 }
 
-/*
-################################################
-################# Cookies ######################
-################################################
-*/
-
-/*
+/*  Cookies  /*
 *    Create cookies:
 *        document.cookie = "user=username"
 */
@@ -55,11 +49,7 @@ function checkCookie() {
     return(0)
 }
 
-/*
-################################################
-############ If Session Active #################
-################################################
-*/
+/* If Session Active  */
 
 window.onload = function () {
 
@@ -74,14 +64,10 @@ window.onload = function () {
     }
 }
 
-/*
-################################################
-################# Buttons ######################
-################################################
-*/
+/* Buttons */
 
 function get_submit(){
-    event.preventDefault()
+    e.preventDefault()
 }
 
 document.getElementById("sign").addEventListener('click', function () {
@@ -144,7 +130,7 @@ document.getElementById("logout-button").addEventListener('click', function () {
 
 
 
-/* ########## show password ################ */
+/*  show password  */
 
 function showPasswd(field1, field2) {
     var show = document.getElementById(field1)
@@ -161,11 +147,7 @@ function showPasswd(field1, field2) {
     }
 }
 
-/*
-################################################
-################# Alerts #######################
-################################################
-*/
+/* Alerts */
 
 var myInput = document.getElementById("passwd");
 var myInput2 = document.getElementById("passwdConfirm");
