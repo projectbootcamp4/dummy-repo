@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap" rel="stylesheet">
+
     <title>Boot Bank</title>
 </head>
 <body>
+	<header img src="./bfc9102a4d8a4f4ea2457cb736b47793.png" alt="bank logo">
     <h1>Welcome</h1>
+	</header>
     <nav>
         <button id="reg-button">Register</button>
         <button id="login-button">Login</button>
-        <!--<button id="show-button">Show my cookies</button>-->
         <button id="logout-button" style="display: none; transition: 1s;">Log Out</button>
     </nav>
         <div id="register">
@@ -33,7 +33,7 @@
                     required> <br>
                     Email*<br>
                     <input type="email" name="contact" id="contact"
-                    pattern="^([0-9]{9})|([A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})$"
+                    pattern="^([A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})$"
                     title="Must be a valid Email"
                     required> <br><br>
                     Password *<br>
@@ -76,7 +76,7 @@
             <form onsubmit="get_submit()">
                 <h2>Login</h2>
                     <input type="text" name="user" id="user" placeholder="Email"
-                    pattern="^([0-9]{9})|([A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})$"
+                    pattern="^([A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})$"
                     title="Must be a valid Email or Phone"
                     required> <br>
                     <input type="password" name="pass" id="pass" placeholder="Password..."

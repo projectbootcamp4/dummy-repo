@@ -1,4 +1,7 @@
-/* The alert message box */
+.header {
+    background-image: url(./bfc9102a4d8a4f4ea2457cb736b47793.png);
+}
+
 .session {
     display: flex;
     align-items: center;
@@ -7,7 +10,7 @@
   
   .again {
     padding: 20px;
-    background-color: #2e99c7; /* Red */
+    background-color: cornflowerblue;
     color: white;
     margin: 15px;
     width: 15em;
@@ -15,7 +18,7 @@
   
   .correct {
     padding: 20px;
-    background-color: #2dad38; /* Red */
+    background-color: green;
     color: white;
     margin: 15px;
     width: 15em;
@@ -23,7 +26,7 @@
   
   .incorrect {
     padding: 20px;
-    background-color: #f44336; /* Red */
+    background-color: red; 
     color: white;
     margin: 15px;
     width: 20em;
@@ -31,13 +34,13 @@
   
   .created {
       padding: 20px;
-      background-color: #2759b4; /* Red */
+      background-color: gray; 
       color: white;
       margin: 15px;
       width: 15em;
   }
   
-  /* The close button */
+  
   .closebtn {
     margin-left: 15px;
     color: white;
@@ -48,13 +51,11 @@
     cursor: pointer;
     transition: 0.3s;
   }
-  
-  /* When moving the mouse over the close button */
+ 
   .closebtn:hover {
     color: black;
   }
   
-  /* ##################################################### */
   
   ::selection {
     color: rgb(66, 131, 230);
@@ -65,7 +66,7 @@
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: medium;
-    background: linear-gradient(270deg, #3592e5, #1142b4);
+    background: linear-gradient(270deg, indigo, indigo);
     background-size: 400% 400%;
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
@@ -163,9 +164,9 @@
   input[type="date"] {
       appearance: none;
       -webkit-appearance: none;
-      color: #ffffff8e;
+      color: gainsboro;
       font-family: 'Muli', sans-serif;
-      border: 2px solid #ecf0f1;
+      border: 2px solid white;
       padding:5px;
       border-top: none;
       border-left: none;
@@ -173,18 +174,16 @@
   }
   
   
-  /* ################ Validate ###################### */
-  
   .center {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  /* The message box is shown when the user clicks on the password field */
+ 
   #message {
     display: none;
-    background: #f1f1f1;
+    background: ghostwhite;
     color: #000;
     position: relative;
     width: 20em;
@@ -202,7 +201,7 @@
     font-size: 12px;
   }
   
-  /* Add a green text color and a checkmark when the requirements are right */
+
   .valid {
     color: green;
   }
@@ -214,7 +213,6 @@
     content: "\f00c";
   }
   
-  /* Add a red text color and an "x" icon when the requirements are wrong */
   .invalid {
     color: red;
   }
