@@ -1,3 +1,5 @@
+/* Login and Register Buttons */
+
 document.getElementById("reg-button").addEventListener('click', function () {
     tab("register", "login", "name")
 })
@@ -22,7 +24,6 @@ function setCookie(nameCookie, valueCookie, expireDays) {
     date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000))
     var expire = "expire=" + date.toUTCString()
     document.cookie = nameCookie + "=" + valueCookie + ";" + expire + ";path=/"
-    //Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
     console.log("%cCookies created!", 'background: #222; color: white')
 }
 
@@ -39,7 +40,7 @@ function getCookie(nameCookie) {
             return cookie.substring(name.length, cookie.length)
         }
     }
-    console.log("%cKO! Cookie does NOT exists.", 'background: #222; color: red')
+    console.log("%cCookie does NOT exists.", 'background: #222; color: red')
     return  null
 }
 
@@ -49,7 +50,7 @@ function checkCookie() {
     return(0)
 }
 
-/* If Session Active  */
+/* Active session */
 
 window.onload = function () {
 
@@ -64,7 +65,7 @@ window.onload = function () {
     }
 }
 
-/* Buttons */
+/* Submit and Authentication */
 
 function get_submit(){
     e.preventDefault()
@@ -93,7 +94,7 @@ document.getElementById("log").addEventListener('click', function () {
     var passSession = document.getElementById("pass").value
     console.log(userSession)
     console.log(passSession)
-    //console.log("The user name is: " + getCookie("user"));
+ 
     if (userSession == getCookie("contact") && passSession == getCookie("pass")){
         document.getElementById("correct").style.display = ""
         document.getElementById("incorrect").style.display = "none"
@@ -117,6 +118,8 @@ document.getElementById("log").addEventListener('click', function () {
     console.log("Cookie checked")
 })
 
+/* Clearing the cookies */
+
 function delete_cookie(name) {
     document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     console.log("%cCookies Deleted!.", 'background: #222; color: orange')
@@ -130,7 +133,7 @@ document.getElementById("logout-button").addEventListener('click', function () {
 
 
 
-/*  show password  */
+/* Show password */
 
 function showPasswd(field1, field2) {
     var show = document.getElementById(field1)
@@ -147,7 +150,7 @@ function showPasswd(field1, field2) {
     }
 }
 
-/* Alerts */
+/* Validation alerts */
 
 var myInput = document.getElementById("passwd");
 var myInput2 = document.getElementById("passwdConfirm");
@@ -173,9 +176,10 @@ myInput2.onkeyup = function (){
     validate()
 }
 
+/* Validate the user inputs */
+
 function validate() {
 
-    // Validate lowercase letters
     var lowerCaseLetters = /[a-z]/g;
     if(myInput.value.match(lowerCaseLetters)) {
       letter.classList.remove("invalid");
@@ -185,7 +189,6 @@ function validate() {
       letter.classList.add("invalid");
   }
 
-    // Validate capital letters
     var upperCaseLetters = /[A-Z]/g;
     if(myInput.value.match(upperCaseLetters)) {
       capital.classList.remove("invalid");
@@ -195,7 +198,6 @@ function validate() {
       capital.classList.add("invalid");
     }
 
-    // Validate numbers
     var numbers = /[0-9]/g;
     if(myInput.value.match(numbers)) {
       number.classList.remove("invalid");
@@ -205,7 +207,6 @@ function validate() {
       number.classList.add("invalid");
     }
 
-    // Validate length
     if(myInput.value.length >= 8) {
       length.classList.remove("invalid");
       length.classList.add("valid");
@@ -214,7 +215,6 @@ function validate() {
       length.classList.add("invalid");
     }
 
-    //Validate matching passwords
     if (myInput.value == myInput2.value && (myInput.value != "" && myInput2.value != "" )){
         match.classList.remove("invalid");
         match.classList.add("valid");
@@ -223,7 +223,6 @@ function validate() {
         match.classList.add("invalid");
     }
 
-    //Hide if all ok
     if (letter.classList.value == "valid" &&
     capital.classList.value == "valid" &&
     number.classList.value == "valid" &&

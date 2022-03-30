@@ -1,3 +1,4 @@
+/* Registration Style */
 
 .session {
     display: flex;
@@ -59,6 +60,8 @@
     background: white;
   }
   
+  /* entire page styles */
+
   body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -92,6 +95,8 @@
     
   }
   
+  /* text box styles */
+
   input[type="text"], input[type="password"], input[type="date"], input[type="email"]{
     background: none;
     color: white;
@@ -131,6 +136,8 @@
     color: white;
   }
   
+  /* Register and Login buttons style */
+
   nav {
     margin-bottom: 5em;
   }
@@ -179,7 +186,8 @@
     justify-content: center;
   }
   
- 
+ /* password requirements style */
+
   #message {
     display: none;
     background: ghostwhite;
@@ -200,6 +208,7 @@
     font-size: 12px;
   }
   
+/* authentication style */
 
   .valid {
     color: green;
