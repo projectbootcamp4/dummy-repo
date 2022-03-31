@@ -24,7 +24,7 @@ function setCookie(nameCookie, valueCookie, expireDays) {
     date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000))
     var expire = "expire=" + date.toUTCString()
     document.cookie = nameCookie + "=" + valueCookie + ";" + expire + ";path=/"
-    console.log("%cCookies created!", 'background: #222; color: white')
+   
 }
 
 function getCookie(nameCookie) {
@@ -36,11 +36,11 @@ function getCookie(nameCookie) {
         while (cookie.charAt(0) == ' ')
             cookie = cookie.substring(1)
         if (cookie.indexOf(name) == 0){
-            console.log("Cookie does exist.", 'background: #222; color: green')
+          
             return cookie.substring(name.length, cookie.length)
         }
     }
-    console.log("%cCookie does NOT exists.", 'background: #222; color: red')
+    
     return  null
 }
 
@@ -72,19 +72,18 @@ function get_submit(){
 }
 
 document.getElementById("sign").addEventListener('click', function () {
-    var pass = document.getElementById("passwd").value
-    var passC = document.getElementById("passwdConfirm").value
+    var password = document.getElementById("passwd").value
+    var passConfirm = document.getElementById("passwdConfirm").value
     var name = document.getElementById("name").value
-    var surname = document.getElementById("surname").value
+    var lastName = document.getElementById("surname").value
 
-    if (pass == passC && pass != "" && pass != "" && name != "" && surname != "")
+    if (password == passConfirm && password != "" && password != "" && name != "" && lastName != "")
     {
         setCookie("contact", document.getElementById("contact").value, 1)
-        setCookie("pass", pass, 1)
+        setCookie("pass", password, 1)
         document.getElementById("incorrectPass").style.display = "none"
         tab("login", "register", "user")
-        console.log(document.cookie)
-        console.log("Cookies added")
+      
     }
 })
 
@@ -92,8 +91,7 @@ document.getElementById("log").addEventListener('click', function () {
 
     var userSession = document.getElementById("user").value
     var passSession = document.getElementById("pass").value
-    console.log(userSession)
-    console.log(passSession)
+   
  
     if (userSession == getCookie("contact") && passSession == getCookie("pass")){
         document.getElementById("correct").style.display = ""
@@ -101,10 +99,9 @@ document.getElementById("log").addEventListener('click', function () {
         document.getElementById("logout-button").style.display = ""
         document.getElementById("reg-button").style.display = "none"
         document.getElementById("login-button").style.display = "none"
-        console.log("user correct")
         setCookie("userSession", userSession, 0.041667)
         setCookie("passSession", passSession, 0.041667)
-        console.log("%cSession Created! Cookies lasts for 1h.", 'background: #222; color: green')
+        
     }
     else {
         document.getElementById("incorrect").style.display = "block"
@@ -112,17 +109,16 @@ document.getElementById("log").addEventListener('click', function () {
         document.getElementById("logout-button").style.display = "none"
         document.getElementById("reg-button").style.display = ""
         document.getElementById("login-button").style.display = ""
-        console.log("user incorrect")
+        
     }
-    console.log(document.cookie)
-    console.log("Cookie checked")
+  
 })
 
 /* Clearing the cookies */
 
 function delete_cookie(name) {
     document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    console.log("%cCookies Deleted!.", 'background: #222; color: orange')
+   
 }
 
 document.getElementById("logout-button").addEventListener('click', function () {
@@ -135,7 +131,7 @@ document.getElementById("logout-button").addEventListener('click', function () {
 
 /* Show password */
 
-function showPasswd(field1, field2) {
+function showPassword(field1, field2) {
     var show = document.getElementById(field1)
     var show2 = document.getElementById(field2)
 
