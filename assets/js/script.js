@@ -1,16 +1,15 @@
 /* Login and Register Buttons */
 
-document.getElementById("reg-button").addEventListener('click', function () {
-    tab("register", "login", "name")
+document.getElementById("register-button").addEventListener('click', function () {
+    flip("register", "login", "name")
 })
 
 document.getElementById("login-button").addEventListener('click', function () {
-    tab("login", "register", "user")
+    flip("login", "register", "user")
 })
 
-function tab (show, hide, focus){
+function flip (show, hide){
     document.getElementById(show).style.display = "block"
-    document.getElementById(focus).focus()
     document.getElementById(hide).style.display = "none"
 }
 
@@ -19,11 +18,11 @@ function tab (show, hide, focus){
 *        document.cookie = "user=username"
 */
 
-function setCookie(nameCookie, valueCookie, expireDays) {
+function setCookie(nameCookie, passCookie, expireDays) {
     var date = new Date()
     date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000))
     var expire = "expire=" + date.toUTCString()
-    document.cookie = nameCookie + "=" + valueCookie + ";" + expire + ";path=/"
+    document.cookie = nameCookie + "=" + passCookie + ";" + expire + ";path=/"
    
 }
 
@@ -55,9 +54,9 @@ function checkCookie() {
 window.onload = function () {
 
     if (checkCookie()){
-    tab("login", "register", "user")
+    flip("login", "register", "user")
     document.getElementById("logout-button").style.display = ""
-    document.getElementById("reg-button").style.display = "none"
+    document.getElementById("register-button").style.display = "none"
     document.getElementById("login-button").style.display = "none"
     document.getElementById("again").style.display = ""
     document.getElementById("incorrect").style.display = "none"
@@ -67,22 +66,22 @@ window.onload = function () {
 
 /* Submit and Authentication */
 
-function get_submit(){
+function getSubmit(){
     e.preventDefault()
 }
 
-document.getElementById("sign").addEventListener('click', function () {
-    var password = document.getElementById("passwd").value
-    var passConfirm = document.getElementById("passwdConfirm").value
-    var name = document.getElementById("name").value
-    var lastName = document.getElementById("surname").value
+document.getElementById("signUp").addEventListener('click', function () {
+    var password = document.getElementById("passCode").value
+    var passConfirm = document.getElementById("passcodeConfirm").value
+    var name = document.getElementById("firstName").value
+    var lastName = document.getElementById("lastName").value
 
     if (password == passConfirm && password != "" && password != "" && name != "" && lastName != "")
     {
         setCookie("contact", document.getElementById("contact").value, 1)
         setCookie("pass", password, 1)
         document.getElementById("incorrectPass").style.display = "none"
-        tab("login", "register", "user")
+        flip("login", "register", "user")
       
     }
 })
@@ -97,7 +96,7 @@ document.getElementById("log").addEventListener('click', function () {
         document.getElementById("correct").style.display = ""
         document.getElementById("incorrect").style.display = "none"
         document.getElementById("logout-button").style.display = ""
-        document.getElementById("reg-button").style.display = "none"
+        document.getElementById("register-button").style.display = "none"
         document.getElementById("login-button").style.display = "none"
         setCookie("userSession", userSession, 0.041667)
         setCookie("passSession", passSession, 0.041667)
@@ -107,7 +106,7 @@ document.getElementById("log").addEventListener('click', function () {
         document.getElementById("incorrect").style.display = "block"
         document.getElementById("correct").style.display = "none"
         document.getElementById("logout-button").style.display = "none"
-        document.getElementById("reg-button").style.display = ""
+        document.getElementById("register-button").style.display = ""
         document.getElementById("login-button").style.display = ""
         
     }
@@ -131,7 +130,7 @@ document.getElementById("logout-button").addEventListener('click', function () {
 
 /* Show password */
 
-function showPassword(field1, field2) {
+function showPasscode(field1, field2) {
     var show = document.getElementById(field1)
     var show2 = document.getElementById(field2)
 
@@ -148,8 +147,8 @@ function showPassword(field1, field2) {
 
 /* Validation alerts */
 
-var myInput = document.getElementById("passwd");
-var myInput2 = document.getElementById("passwdConfirm");
+var myInput = document.getElementById("passCode");
+var myInput2 = document.getElementById("passcodeConfirm");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");

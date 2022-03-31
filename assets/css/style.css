@@ -1,12 +1,12 @@
 /* Registration Style */
 
-.session {
+.confirmed {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .again {
+  .WelcomeBack {
     padding: 20px;
     background-color: cornflowerblue;
     color: white;
@@ -30,7 +30,7 @@
     width: 20em;
   }
   
-  .created {
+  .userCreated {
       padding: 20px;
       background-color: gray; 
       color: white;
@@ -39,7 +39,7 @@
   }
   
   
-  .closebtn {
+  .closeButton {
     margin-left: 15px;
     color: white;
     font-weight: bold;
@@ -50,7 +50,7 @@
     transition: 0.3s;
   }
  
-  .closebtn:hover {
+  .closeButton:hover {
     color: black;
   }
   
@@ -91,7 +91,7 @@
   }
   
   h1 {
-    font-weight: 700;
+    font-weight: bolder;
     
   }
   
