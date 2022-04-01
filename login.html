@@ -70,9 +70,9 @@
     </div>
                     
     <div class="confirmed">
-     <div class="userCreated" style="display: none;">
+    <div class="userCreated" style="display: none;">
                             
-    User created!
+        User created!
                            
     <span class="closeButton" onclick="this.parentElement.style.display='none';">&times;</span>
     </div>
@@ -86,7 +86,6 @@
         <h2>Login</h2>
 
     <input type="text" name="user" id="user" placeholder="Email" pattern="^([A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})$" title="Must be a valid Email"required> 
- 
     <br>
     
     <input type="password" name="pass" id="pass" placeholder="Password..." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
@@ -96,7 +95,8 @@
     <br>
                     
     <div class="submit">
-    <input type="submit" value="Log in" id="log">
+   <input type="submit" value="Log in" id="log" onClick="location.href='../'"/> <!--placeholder for login URL-->
+
     </div>
     
     <div class="confirmed">

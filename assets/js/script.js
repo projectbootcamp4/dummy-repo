@@ -82,6 +82,7 @@ document.getElementById("signUp").addEventListener('click', function () {
         setCookie("pass", password, 1)
         document.getElementById("incorrectPass").style.display = "none"
         flip("login", "register", "user")
+
       
     }
 })
